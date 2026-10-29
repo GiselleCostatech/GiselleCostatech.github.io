@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giselle Costa | Portfólio</title>
+<title>Giselle Costa | Engenheira de Dados</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 
         :root {
 
-            --bg-color: #faf5ff;
+            --bg-color: #fdf4f8;
 
             --card-bg: #ffffff;
 
-            --primary-pink: #f472b6;
+            --primary-pink: #ec4899;
 
-            --primary-purple: #a855f7;
+            --primary-purple: #9333ea;
 
-            --dark-purple: #6b21a8;
+            --light-purple: #f3e8ff;
 
-            --text-color: #4b5563;
+            --text-color: #374151;
 
-            --heading-color: #2e1065;
+            --heading-color: #581c87;
 
-            --accent-soft: #f3e8ff;
+            --accent-border: #fbcfe8;
 
         }
 
@@ -37,6 +37,8 @@
             box-sizing: border-box;
 
             font-family: 'Poppins', sans-serif;
+
+            scroll-behavior: smooth;
 
         }
 
@@ -56,7 +58,7 @@
 
             background: var(--card-bg);
 
-            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
+            box-shadow: 0 4px 20px rgba(147, 51, 234, 0.08);
 
             position: fixed;
 
@@ -88,9 +90,9 @@
 
             font-weight: 700;
 
-            color: var(--dark-purple);
+            color: var(--heading-color);
 
-            font-size: 1.2rem;
+            font-size: 1.1rem;
 
         }
 
@@ -100,7 +102,9 @@
 
             list-style: none;
 
-            gap: 1.5rem;
+            gap: 1.2rem;
+
+            flex-wrap: wrap;
 
         }
 
@@ -112,13 +116,15 @@
 
             font-weight: 500;
 
+            font-size: 0.95rem;
+
             transition: color 0.3s;
 
         }
 
         nav ul li a:hover {
 
-            color: var(--primary-purple);
+            color: var(--primary-pink);
 
         }
 
@@ -126,9 +132,9 @@
 
         main {
 
-            max-width: 800px;
+            max-width: 850px;
 
-            margin: 100px auto 50px auto;
+            margin: 110px auto 50px auto;
 
             padding: 0 1.5rem;
 
@@ -144,9 +150,9 @@
 
             margin-bottom: 2rem;
 
-            box-shadow: 0 10px 30px rgba(244, 114, 182, 0.1);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.08);
 
-            border: 2px solid var(--accent-soft);
+            border: 2px solid var(--accent-border);
 
         }
 
@@ -156,13 +162,17 @@
 
             margin-bottom: 1.5rem;
 
-            font-size: 1.8rem;
+            font-size: 1.6rem;
 
             display: flex;
 
             align-items: center;
 
-            gap: 0.5rem;
+            gap: 0.6rem;
+
+            border-bottom: 2px dashed var(--light-purple);
+
+            padding-bottom: 0.5rem;
 
         }
 
@@ -184,9 +194,9 @@
 
         .profile-img {
 
-            width: 150px;
+            width: 160px;
 
-            height: 150px;
+            height: 160px;
 
             border-radius: 50%;
 
@@ -194,17 +204,107 @@
 
             border: 4px solid var(--primary-pink);
 
-            box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.25);
 
         }
 
-        /* Projetos Clicáveis */
+        .about-text p {
+
+            margin-bottom: 1rem;
+
+            text-align: justify;
+
+        }
+
+        /* Timeline de Trajetória / Experiências */
+
+        .timeline {
+
+            position: relative;
+
+            padding-left: 2rem;
+
+            border-left: 3px solid var(--primary-pink);
+
+            margin-top: 1rem;
+
+        }
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 2rem;
+
+        }
+
+        .timeline-item::before {
+
+            content: '';
+
+            position: absolute;
+
+            left: -2.38rem;
+
+            top: 0.3rem;
+
+            width: 14px;
+
+            height: 14px;
+
+            border-radius: 50%;
+
+            background: var(--primary-purple);
+
+            border: 3px solid #fff;
+
+        }
+
+        .timeline-date {
+
+            display: inline-block;
+
+            background: var(--light-purple);
+
+            color: var(--heading-color);
+
+            padding: 0.2rem 0.8rem;
+
+            border-radius: 20px;
+
+            font-size: 0.85rem;
+
+            font-weight: 600;
+
+            margin-bottom: 0.5rem;
+
+        }
+
+        .timeline-item h3 {
+
+            font-size: 1.1rem;
+
+            color: var(--heading-color);
+
+        }
+
+        .timeline-item p {
+
+            font-size: 0.95krem;
+
+            color: var(--text-color);
+
+            margin-top: 0.3rem;
+
+        }
+
+        /* Grid de Projetos */
 
         .projects-grid {
 
             display: grid;
 
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
             gap: 1.5rem;
 
@@ -212,7 +312,7 @@
 
         .project-card {
 
-            background: var(--accent-soft);
+            background: var(--light-purple);
 
             padding: 1.5rem;
 
@@ -220,11 +320,11 @@
 
             text-decoration: none;
 
-            color: var(--heading-color);
+            color: var(--text-color);
 
             transition: transform 0.3s, box-shadow 0.3s;
 
-            border: 1px solid rgba(168, 85, 247, 0.2);
+            border: 1px solid rgba(147, 51, 234, 0.15);
 
             display: flex;
 
@@ -238,7 +338,7 @@
 
             transform: translateY(-5px);
 
-            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.2);
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.15);
 
             background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
 
@@ -246,9 +346,51 @@
 
         .project-card h3 {
 
-            color: var(--dark-purple);
+            color: var(--heading-color);
 
             font-size: 1.1rem;
+
+        }
+
+        /* Lista de Certificações */
+
+        .cert-list {
+
+            list-style: none;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1rem;
+
+        }
+
+        .cert-item {
+
+            background: var(--light-purple);
+
+            padding: 1rem 1.2rem;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 1rem;
+
+            font-weight: 500;
+
+            color: var(--heading-color);
+
+        }
+
+        .cert-item i {
+
+            color: var(--primary-pink);
+
+            font-size: 1.2rem;
 
         }
 
@@ -268,9 +410,9 @@
 
         .social-links a {
 
-            background: var(--accent-soft);
+            background: var(--light-purple);
 
-            color: var(--dark-purple);
+            color: var(--heading-color);
 
             width: 50px;
 
@@ -290,13 +432,13 @@
 
             transition: all 0.3s;
 
-            box-shadow: 0 4px 10px rgba(168, 85, 247, 0.15);
+            box-shadow: 0 4px 10px rgba(147, 51, 234, 0.15);
 
         }
 
         .social-links a:hover {
 
-            background: var(--primary-purple);
+            background: var(--primary-pink);
 
             color: white;
 
@@ -318,9 +460,11 @@
 
         }
 
-        @media(max-width: 600px) {
+        @media(max-width: 768px) {
 
-            nav ul { display: none; }
+            nav { flex-direction: column; gap: 0.8rem; }
+
+            nav ul { justify-content: center; }
 
         }
 </style>
@@ -331,7 +475,9 @@
 <div class="logo">✨ Giselle Costa</div>
 <ul>
 <li><a href="#sobre">Sobre</a></li>
+<li><a href="#trajetoria">Trajetória</a></li>
 <li><a href="#projetos">Projetos</a></li>
+<li><a href="#certificacoes">Certificações</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
 </nav>
@@ -341,34 +487,61 @@
 <section id="sobre">
 <h2><i class="fa-solid fa-user-pen" style="color: var(--primary-pink);"></i> Sobre Mim</h2>
 <div class="about-content">
-<!-- Substitua o link da foto abaixo pela sua foto ou imagem de perfil -->
-<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Giselle" class="profile-img">
-<p>Engenheira de Dados apaixonada por tecnologia, automação e arquitetura de dados. Criadora da comunidade <strong>Tech Girls</strong>, mentora de carreiras e sempre em busca de novos desafios para simplificar sistemas complexos! 💜</p>
+<!-- Substitua 'minha-foto.jpg' pelo nome exato do arquivo da sua foto que você subir no GitHub -->
+<img src="minha-foto.jpg" alt="Giselle Costa" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400'">
+<div class="about-text">
+<p>Olá! Sou Engenheira de Dados atuando no mercado de telecomunicações, focada em arquitetura de dados, pipelines de ingestão, catalogação e governança de metadados.</p>
+<p>Também sou fundadora da comunidade <strong>Tech Girls</strong>, onde atuo ativamente mentorando mulheres na tecnologia e promovendo a inclusão feminina no mercado tech 💜.</p>
+</div>
 </div>
 </section>
-<!-- PROJETOS CLICÁVEIS -->
+<!-- TRAJETÓRIA / EXPERIÊNCIAS -->
+<section id="trajetoria">
+<h2><i class="fa-solid fa-timeline" style="color: var(--primary-purple);"></i> Trajetória Profissional</h2>
+<div class="timeline">
+<div class="timeline-item">
+<span class="timeline-date">Agosto 2026 - Presente</span>
+<h3>Engenheira de Dados — GAR Data Platform</h3>
+<p>Atuação no GAR Data Platform (Claro / América Móvil), focada desde o início da cadeia de dados em catalogação de sistemas, mapeamento de metadados, ingestão, PySpark e OCI para garantir governança e qualidade.</p>
+</div>
+<div class="timeline-item">
+<span class="timeline-date">Março 2026 - Julho 2026</span>
+<h3>Engenheira de Dados — Squad Credencial / PDP</h3>
+<p>Início na Claro Telecom focada em pipelines ETL, AWS (Athena, Glue, S3), SQL e documentação técnica de regras de contabilização de requisições e FINOPS.</p>
+</div>
+</div>
+</section>
+<!-- PROJETOS -->
 <section id="projetos">
-<h2><i class="fa-solid fa-laptop-code" style="color: var(--primary-purple);"></i> Projetos em Destaque</h2>
+<h2><i class="fa-solid fa-laptop-code" style="color: var(--primary-pink);"></i> Projetos em Destaque</h2>
 <div class="projects-grid">
-<!-- Substitua os links "#" pelos links reais dos seus repositórios no GitHub -->
 <a href="https://github.com/GiselleCostatech" target="_blank" class="project-card">
-<h3>🚀 Pipeline de Telecom</h3>
-<p>Auditoria de cobrança e tratamento de dados com Airflow, dbt e DuckDB.</p>
+<h3>🚀 Pipeline de Auditoria Telecom</h3>
+<p>Pipeline open-source construído em Airflow, dbt e DuckDB para validação e auditoria de cobrança de dados.</p>
 </a>
 <a href="https://github.com/GiselleCostatech" target="_blank" class="project-card">
-<h3>🤖 GenAI & Machine Learning</h3>
-<p>Projetos voltados para análise preditiva e inteligência artificial aplicadas.</p>
+<h3>📊 Governança & Metadados</h3>
+<p>Mapeamento de arquitetura, catalogação de sistemas de grande escala e automação de metadados em nuvem.</p>
 </a>
 <a href="https://github.com/GiselleCostatech" target="_blank" class="project-card">
-<h3>📊 Automação de Dados</h3>
-<p>Ingestão, catalogação de metadados e governança em ambientes cloud (AWS/OCI).</p>
+<h3>🐍 Pipelines PySpark & AWS</h3>
+<p>Processamento de grandes volumes de logs e dados estruturados utilizando AWS (Glue, Athena, S3) e Python.</p>
 </a>
 </div>
+</section>
+<!-- CERTIFICAÇÕES -->
+<section id="certificacoes">
+<h2><i class="fa-solid fa-award" style="color: var(--primary-purple);"></i> Certificações & Cursos</h2>
+<ul class="cert-list">
+<li class="cert-item"><i class="fa-solid fa-badge-check"></i> Engenharia de Dados & Cloud Computing (AWS / OCI)</li>
+<li class="cert-item"><i class="fa-solid fa-badge-check"></i> SQL Avançado, Python e Modelagem de Dados</li>
+<li class="cert-item"><i class="fa-solid fa-badge-check"></i> Governança de Dados, dbt e Airflow</li>
+</ul>
 </section>
 <!-- CONTATO -->
 <section id="contato" style="text-align: center;">
 <h2><i class="fa-solid fa-envelope-open-heart" style="color: var(--primary-pink);"></i> Vamos Conectar?</h2>
-<p>Acesse minhas redes ou entre em contato direto:</p>
+<p>Conecte-se comigo nas redes ou mande uma mensagem:</p>
 <div class="social-links">
 <a href="https://github.com/GiselleCostatech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
 <a href="https://linkedin.com/in/giselle-costa" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
