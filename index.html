@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giselle Costa | Portfólio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+
+        :root {
+
+            --bg-color: #faf5ff;
+
+            --card-bg: #ffffff;
+
+            --primary-pink: #f472b6;
+
+            --primary-purple: #a855f7;
+
+            --dark-purple: #6b21a8;
+
+            --text-color: #4b5563;
+
+            --heading-color: #2e1065;
+
+            --accent-soft: #f3e8ff;
+
+        }
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+
+            background-color: var(--bg-color);
+
+            color: var(--text-color);
+
+            line-height: 1.6;
+
+        }
+
+        /* Header / Navbar */
+
+        header {
+
+            background: var(--card-bg);
+
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.08);
+
+            position: fixed;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+        }
+
+        nav {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 1rem 2rem;
+
+        }
+
+        .logo {
+
+            font-weight: 700;
+
+            color: var(--dark-purple);
+
+            font-size: 1.2rem;
+
+        }
+
+        nav ul {
+
+            display: flex;
+
+            list-style: none;
+
+            gap: 1.5rem;
+
+        }
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: var(--text-color);
+
+            font-weight: 500;
+
+            transition: color 0.3s;
+
+        }
+
+        nav ul li a:hover {
+
+            color: var(--primary-purple);
+
+        }
+
+        /* Container Principal */
+
+        main {
+
+            max-width: 800px;
+
+            margin: 100px auto 50px auto;
+
+            padding: 0 1.5rem;
+
+        }
+
+        section {
+
+            background: var(--card-bg);
+
+            border-radius: 20px;
+
+            padding: 2.5rem;
+
+            margin-bottom: 2rem;
+
+            box-shadow: 0 10px 30px rgba(244, 114, 182, 0.1);
+
+            border: 2px solid var(--accent-soft);
+
+        }
+
+        h2 {
+
+            color: var(--heading-color);
+
+            margin-bottom: 1.5rem;
+
+            font-size: 1.8rem;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.5rem;
+
+        }
+
+        /* Seção Sobre */
+
+        .about-content {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            gap: 1.5rem;
+
+        }
+
+        .profile-img {
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 4px solid var(--primary-pink);
+
+            box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+
+        }
+
+        /* Projetos Clicáveis */
+
+        .projects-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+            gap: 1.5rem;
+
+        }
+
+        .project-card {
+
+            background: var(--accent-soft);
+
+            padding: 1.5rem;
+
+            border-radius: 15px;
+
+            text-decoration: none;
+
+            color: var(--heading-color);
+
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            border: 1px solid rgba(168, 85, 247, 0.2);
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.5rem;
+
+        }
+
+        .project-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.2);
+
+            background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+
+        }
+
+        .project-card h3 {
+
+            color: var(--dark-purple);
+
+            font-size: 1.1rem;
+
+        }
+
+        /* Contato / Redes Sociais */
+
+        .social-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 1.5rem;
+
+            margin-top: 1rem;
+
+        }
+
+        .social-links a {
+
+            background: var(--accent-soft);
+
+            color: var(--dark-purple);
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 1.3rem;
+
+            text-decoration: none;
+
+            transition: all 0.3s;
+
+            box-shadow: 0 4px 10px rgba(168, 85, 247, 0.15);
+
+        }
+
+        .social-links a:hover {
+
+            background: var(--primary-purple);
+
+            color: white;
+
+            transform: scale(1.1);
+
+        }
+
+        /* Rodapé */
+
+        footer {
+
+            text-align: center;
+
+            padding: 2rem;
+
+            color: #9ca3af;
+
+            font-size: 0.9rem;
+
+        }
+
+        @media(max-width: 600px) {
+
+            nav ul { display: none; }
+
+        }
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">✨ Giselle Costa</div>
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<!-- SOBRE -->
+<section id="sobre">
+<h2><i class="fa-solid fa-user-pen" style="color: var(--primary-pink);"></i> Sobre Mim</h2>
+<div class="about-content">
+<!-- Substitua o link da foto abaixo pela sua foto ou imagem de perfil -->
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Giselle" class="profile-img">
+<p>Engenheira de Dados apaixonada por tecnologia, automação e arquitetura de dados. Criadora da comunidade <strong>Tech Girls</strong>, mentora de carreiras e sempre em busca de novos desafios para simplificar sistemas complexos! 💜</p>
+</div>
+</section>
+<!-- PROJETOS CLICÁVEIS -->
+<section id="projetos">
+<h2><i class="fa-solid fa-laptop-code" style="color: var(--primary-purple);"></i> Projetos em Destaque</h2>
+<div class="projects-grid">
+<!-- Substitua os links "#" pelos links reais dos seus repositórios no GitHub -->
+<a href="https://github.com/GiselleCostatech" target="_blank" class="project-card">
+<h3>🚀 Pipeline de Telecom</h3>
+<p>Auditoria de cobrança e tratamento de dados com Airflow, dbt e DuckDB.</p>
+</a>
+<a href="https://github.com/GiselleCostatech" target="_blank" class="project-card">
+<h3>🤖 GenAI & Machine Learning</h3>
+<p>Projetos voltados para análise preditiva e inteligência artificial aplicadas.</p>
+</a>
+<a href="https://github.com/GiselleCostatech" target="_blank" class="project-card">
+<h3>📊 Automação de Dados</h3>
+<p>Ingestão, catalogação de metadados e governança em ambientes cloud (AWS/OCI).</p>
+</a>
+</div>
+</section>
+<!-- CONTATO -->
+<section id="contato" style="text-align: center;">
+<h2><i class="fa-solid fa-envelope-open-heart" style="color: var(--primary-pink);"></i> Vamos Conectar?</h2>
+<p>Acesse minhas redes ou entre em contato direto:</p>
+<div class="social-links">
+<a href="https://github.com/GiselleCostatech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+<a href="https://linkedin.com/in/giselle-costa" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://instagram.com/giselletechh" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="mailto:seu-email@exemplo.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</section>
+</main>
+<footer>
+<p>Feito com 💜 por Giselle Costa — 2026</p>
+</footer>
+</body>
+</html>
+ 
